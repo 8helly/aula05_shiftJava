@@ -81,7 +81,6 @@ public class TeacherHelper {
                             break;
 
                     }
-
                     break;
                 case 4:
                     System.out.println("Encerrando o sistema...");
