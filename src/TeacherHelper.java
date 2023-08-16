@@ -11,13 +11,13 @@ public class TeacherHelper {
 
         Scanner leitor = new Scanner(System.in);
 
-        while(opcao!=4) {
+        do{
             System.out.println("FERRAMENTA DE AUXÍLIO AO PROFESSOR!");
             System.out.println("Selecione a opção desejada:");
             System.out.println("1 - Calcular salário");
             System.out.println("2 - Calcular média de notas dos alunos");
             System.out.println("3 - Exibir a motivação do dia!");
-            opcao = leitor.nextInt();
+            opcao = leitor.nextInt(); //inicialização; variável não precisa ser numérica
 
             switch (opcao) {
                 case 1:
@@ -43,13 +43,13 @@ public class TeacherHelper {
                 case 2:
                     System.out.println("Para calcularmos a média das notas dos alunos é preciso saber, primeiramente, quantos alunos estão na turma:");
                     qtdeAlunos = leitor.nextInt();
-                    i = 0;
+                    i = 0; //inicialização
                     mediaAlunos=0;
-                    while (i<qtdeAlunos) {
+                    while (i<qtdeAlunos) { //condição
                         System.out.println("Digite a nota do " + (i+1) + "º aluno:");
                         notaAluno = leitor.nextDouble();
                         mediaAlunos = mediaAlunos + notaAluno;
-                        i++;
+                        i++; //incremento
                     }
                     mediaAlunos = mediaAlunos / qtdeAlunos;
                     System.out.println("A média de notas dos alunos dessa turma é " + mediaAlunos);
@@ -87,7 +87,7 @@ public class TeacherHelper {
                     break;
             }
 
-        }
+        }while(opcao!=4);
 
         leitor.close();
 
